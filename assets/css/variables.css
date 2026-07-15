@@ -1,0 +1,31 @@
+:root {
+    /* Colors */
+    --bg-main: #0B0E14; /* Deep dark blue/black */
+    --bg-secondary: #151A22;
+    --bg-glass: rgba(21, 26, 34, 0.6);
+    --bg-glass-hover: rgba(30, 38, 50, 0.8);
+    
+    --accent-gold: #c5a365; /* POE style gold */
+    --accent-gold-hover: #e0c286;
+    --accent-red: #d93838;
+    
+    --text-primary: #F0F4F8;
+    --text-secondary: #A0ABC0;
+    
+    /* Tier Colors */
+    --tier-s: #FF7E67;
+    --tier-a: #FFB167;
+    --tier-b: #F9E77A;
+
+    /* Fonts */
+    --font-heading: 'Prompt', sans-serif;
+    --font-body: 'Inter', 'Prompt', sans-serif;
+
+    /* Effects */
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+

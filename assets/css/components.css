@@ -1,0 +1,337 @@
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, rgba(11, 14, 20, 0.5), rgba(11, 14, 20, 1)), url('images/poe2_banner.png') center/cover no-repeat;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+    min-height: 45vh;
+    padding: 30px 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, var(--bg-main) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 60px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(197, 163, 101, 0.15);
+    border: 1px solid rgba(197, 163, 101, 0.3);
+    color: var(--accent-gold);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    backdrop-filter: blur(4px);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    background: linear-gradient(135deg, #fff 0%, #cbd5e0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* --- Search Bar --- */
+.search-bar {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 8px;
+    backdrop-filter: blur(10px);
+}
+.search-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    outline: none;
+}
+.search-bar input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 14px 32px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, #a38246 100%);
+    color: #000;
+    border: none;
+    box-shadow: 0 4px 15px rgba(197, 163, 101, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(197, 163, 101, 0.4);
+    background: linear-gradient(135deg, var(--accent-gold-hover) 0%, #ba9656 100%);
+}
+
+.btn-secondary {
+    background: var(--bg-glass);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-glass-hover);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* --- Cards (Glassmorphism) --- */
+.card {
+    background: linear-gradient(145deg, var(--bg-glass) 0%, rgba(21, 26, 34, 0.4) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(197, 163, 101, 0.3);
+    background: linear-gradient(145deg, var(--bg-glass-hover) 0%, rgba(30, 38, 50, 0.6) 100%);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 15px rgba(197, 163, 101, 0.1);
+}
+
+/* Game Card */
+.game-card .card-image {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+@media (max-width: 768px) {
+    .game-card .card-image {
+        height: 120px;
+    }
+    .game-card .card-content {
+        padding: 16px 12px;
+    }
+    .game-card h3 {
+        font-size: 1rem;
+    }
+}
+
+.game-card .card-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 50%;
+    background: linear-gradient(to top, var(--bg-main) 0%, transparent 100%);
+}
+
+.game-card .card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.game-card h3 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    transition: var(--transition);
+    position: relative;
+    display: inline-block;
+}
+
+.game-card:hover h3 {
+    color: var(--accent-gold);
+    text-shadow: 0 0 10px rgba(197, 163, 101, 0.5);
+}
+
+/* Guide Card */
+.guide-card {
+    display: flex;
+    align-items: stretch;
+    padding: 24px;
+    position: relative;
+}
+
+.guide-badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #000;
+}
+
+.tier-s .guide-badge { background-color: var(--tier-s); }
+.tier-a .guide-badge { background-color: var(--tier-a); }
+.tier-b .guide-badge { background-color: var(--tier-b); }
+
+.guide-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    padding-right: 70px;
+}
+
+.guide-info h3 span {
+    font-weight: 400;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.guide-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.guide-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.8rem;
+    color: rgba(160, 171, 192, 0.7);
+}
+
+.league-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0b0e14;
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #222;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.league-banner::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: 0; right: 0; bottom: -2px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    pointer-events: none;
+}
+
+.league-logo {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    background: linear-gradient(90deg, rgba(11,14,20,1) 0%, rgba(11,14,20,0.5) 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.league-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.league-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 8px 20px;
+    background: linear-gradient(270deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+    flex-grow: 1;
+}
+
+.league-status {
+    color: #5bbcd1;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.league-countdown {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.league-countdown .time-num {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.5);
+    font-family: 'Inter', sans-serif;
+}
+
+.league-countdown .time-label {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 2px;
+    font-family: 'Inter', sans-serif;
+}

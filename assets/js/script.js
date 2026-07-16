@@ -40,13 +40,13 @@ function ensureSiteNavbar() {
                 </button>
 
                 <div class="nav-links">
-                    <a href="${resolveSitePath('index.html')}">หน้าแรก</a>
+                    // <a href="${resolveSitePath('index.html')}">หน้าแรก</a>
                     <a href="${resolveSitePath('poe2/index.html')}" class="nav-game-link">
                         <img src="${resolveSitePath('assets/images/icons/poe2_icon.ico')}" alt="POE2" class="nav-game-icon" onerror="this.style.display='none'">
                         Path of Exile 2
                     </a>
-                    <a href="${resolveSitePath('Cookie-Run-Classic/index.html')}">Cookie Run Classic</a>
-                    <a href="${resolveSitePath('global-sitemap.html')}">แผนผังเว็บไซต์</a>
+                    // <a href="${resolveSitePath('Cookie-Run-Classic/index.html')}">Cookie Run Classic</a>
+                    // <a href="${resolveSitePath('global-sitemap.html')}">แผนผังเว็บไซต์</a>
                     <a href="https://discord.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="color: #ffffff; padding: 8px 16px;">
                         <img src="${resolveSitePath('assets/images/icons/discord_icon.ico')}" alt="Discord" class="nav-game-icon" onerror="this.style.display='none'">
                         เข้าร่วม Discord

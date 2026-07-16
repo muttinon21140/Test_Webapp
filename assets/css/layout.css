@@ -81,11 +81,13 @@
     flex: 1;
     width: 100%;
     border: none;
-    /* Adjust margin-top to offset the fixed navbar height */
-    margin-top: 64px; 
-    /* height removed to let content expand naturally */
+    margin-top: 0;
     display: block;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+body.has-site-navbar {
+    padding-top: 64px;
 }
 
 .content-frame.loading {

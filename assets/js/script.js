@@ -1,3 +1,26 @@
+function getSiteBasePath() {
+    const pathname = window.location.pathname.replace(/\\/g, '/');
+    const segments = pathname.split('/').filter(Boolean);
+    const siteFolderIndex = segments.findIndex(segment => /^(test_webapp|guguide)$/i.test(segment));
+
+    if (siteFolderIndex !== -1) {
+        const siteSegments = segments.slice(0, siteFolderIndex + 1);
+        return `/${siteSegments.join('/')}/`;
+    }
+
+    return '/';
+}
+
+function resolveSitePath(path) {
+    if (!path) return './';
+    if (/^(https?:)?\/\//i.test(path) || path.startsWith('#') || path.startsWith('mailto:')) {
+        return path;
+    }
+
+    const normalizedPath = path.replace(/^\/+/, '');
+    return `${getSiteBasePath()}${normalizedPath}`;
+}
+
 function ensureSiteNavbar() {
     if (document.querySelector('.navbar')) {
         return document.querySelector('.navbar');
@@ -6,17 +29,26 @@ function ensureSiteNavbar() {
     const navMarkup = `
         <nav class="navbar">
             <div class="nav-container">
-                <a href="index.html" class="logo">
+                <a href="${resolveSitePath('index.html')}" class="logo">
                     <span class="logo-text">GU</span><span class="logo-accent">GUIDE</span>
                 </a>
 
+                <button class="mobile-menu-btn" type="button" aria-label="เปิดเมนู">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
                 <div class="nav-links">
-                    <a href="poe2/index.html" class="nav-game-link">
-                        <img src="assets/images/icons/poe2_icon.ico" alt="POE2" class="nav-game-icon" onerror="this.style.display='none'">
+                    <a href="${resolveSitePath('index.html')}">หน้าแรก</a>
+                    <a href="${resolveSitePath('poe2/index.html')}" class="nav-game-link">
+                        <img src="${resolveSitePath('assets/images/icons/poe2_icon.ico')}" alt="POE2" class="nav-game-icon" onerror="this.style.display='none'">
                         Path of Exile 2
                     </a>
-                    <a href="#" class="btn btn-primary" style="color: #ffffff; padding: 8px 16px;">
-                        <img src="assets/images/icons/discord_icon.ico" alt="Discord" class="nav-game-icon" onerror="this.style.display='none'">
+                    <a href="${resolveSitePath('Cookie-Run-Classic/index.html')}">Cookie Run Classic</a>
+                    <a href="${resolveSitePath('global-sitemap.html')}">แผนผังเว็บไซต์</a>
+                    <a href="https://discord.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="color: #ffffff; padding: 8px 16px;">
+                        <img src="${resolveSitePath('assets/images/icons/discord_icon.ico')}" alt="Discord" class="nav-game-icon" onerror="this.style.display='none'">
                         เข้าร่วม Discord
                     </a>
                 </div>
@@ -24,6 +56,7 @@ function ensureSiteNavbar() {
         </nav>
     `;
 
+    document.body.classList.add('has-site-navbar');
     document.body.insertAdjacentHTML('afterbegin', navMarkup);
     return document.querySelector('.navbar');
 }
@@ -169,14 +202,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function normalizePath(path) {
+        if (!path) return '/';
+        const normalized = path.replace(/\\/g, '/');
+        return normalized.replace(/\/+/g, '/').replace(/\/index\.html$/i, '/').replace(/\/$/, '');
+    }
+
     function updateNavbarActiveState(currentPath) {
+        const currentPathNormalized = normalizePath(currentPath);
+
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.classList.remove('active');
             const linkHref = link.getAttribute('href');
-            
-            if (linkHref !== '/' && linkHref !== '#' && currentPath.includes(linkHref)) {
+            if (!linkHref || linkHref.startsWith('#') || linkHref.startsWith('http')) {
+                return;
+            }
+
+            const resolvedPath = normalizePath(new URL(linkHref, window.location.href).pathname);
+            const currentPathWithoutRoot = currentPathNormalized.replace(/\/+$|\/index$/i, '');
+            const linkPathWithoutRoot = resolvedPath.replace(/\/+$|\/index$/i, '');
+
+            if (linkPathWithoutRoot === currentPathWithoutRoot) {
                 link.classList.add('active');
-            } else if (linkHref === '/' && (currentPath === '/' || currentPath.includes('home.html') || currentPath.includes('index.html'))) {
+            } else if (linkPathWithoutRoot === '' && currentPathWithoutRoot === '') {
                 link.classList.add('active');
             }
         });

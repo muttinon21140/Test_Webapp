@@ -25,33 +25,120 @@
     <main class="container">
         <section class="section">
             <div class="section-header">
-                <h2>Cookie แนะนำ</h2>
+                <h2>Cookie ทั้งหมด 91 ตัว</h2>
             </div>
-            <div class="grid grid-3">
-                <article class="card game-card">
-                    <div class="card-image" style="background-color: #f6c65f;"></div>
-                    <div class="card-content">
-                        <h3>Adventurer Cookie</h3>
-                        <p>บัฟคะแนนสูง เหมาะสำหรับการเดินทางเก็บคะแนนและหนีจากกับดักได้ดี</p>
-                    </div>
-                </article>
-                <article class="card game-card">
-                    <div class="card-image" style="background-color: #8ccfff;"></div>
-                    <div class="card-content">
-                        <h3>Dark Choco Cookie</h3>
-                        <p>เพิ่มพลังโจมตี ทำให้กระทบศัตรูหลายตัวพร้อมกันได้แรงขึ้น</p>
-                    </div>
-                </article>
-                <article class="card game-card">
-                    <div class="card-image" style="background-color: #ff7dbf;"></div>
-                    <div class="card-content">
-                        <h3>Matcha Cookie</h3>
-                        <p>เก่งด้านชีวิตและการป้องกัน เหมาะสำหรับด่านที่มีการชนทางเดินเยอะ</p>
-                    </div>
-                </article>
-            </div>
+            <div id="cookie-grid" class="grid grid-3"></div>
         </section>
     </main>
+
     <script src="/assets/js/script.js"></script>
+    <script>
+        const cookies = [
+            'Admiral Gimbap Cookie',
+            'Adventurer Cookie',
+            'Alchemist Cookie',
+            'Angel Cookie',
+            'Apple Cookie',
+            'Banana Cookie',
+            'Barley Sentry Cookie',
+            'Blackberry Cookie',
+            'Blooming Dancheong Cookie',
+            'Buttercream Choco Cookie',
+            'Carol Cookie',
+            'Cheerleader Cookie',
+            'Cheesecake Cookie',
+            'Cherry Blossom Cookie',
+            'Cherry Cookie',
+            'Choco Pistachio Cookie',
+            'Cinnamon Cookie',
+            'Cloud Cookie',
+            'Cocoa Cookie',
+            'Coffee Cookie',
+            'Cotton Candy Cookie',
+            'Cream Cookie',
+            'Cream Puff Cookie',
+            'Cucumber Cookie',
+            'Dandelion Fairy Cookie',
+            'Devil Cookie',
+            'Dino Sour Cookie',
+            'Fairy Cookie',
+            'Fire Spirit Cookie',
+            'Garaetteok Cookie',
+            'General Jujube Cookie',
+            'Ginger Claus',
+            'GingerBrave',
+            'GingerBright',
+            'Gulab Jamun Cookie',
+            'Gumball Cookie',
+            'Herb Cookie',
+            'Hero Cookie',
+            'Kaju Katli Cookie',
+            'Kaymak Cookie',
+            'Kiwi Cookie',
+            'Knight Cookie',
+            'Kumiho Cookie',
+            'Lemon Cookie',
+            'Lime Cookie',
+            'Lotus Root Phantom Cookie',
+            'Macaron Cookie',
+            'Manggaetteok Cookie',
+            'Marshmallow Bunny Cookie',
+            'Mint Choco Cookie',
+            'Moon Rabbit Cookie',
+            'Moonlight Cookie',
+            'Muscle Cookie',
+            'Ninja Cookie',
+            'Onion Cookie',
+            'Orange Cookie',
+            'Pancake Cookie',
+            'Peach Cookie',
+            'Peppermint Cookie',
+            'Pine Monk Cookie',
+            'Pink Coco Cookie',
+            'Pirate Cookie',
+            'Pistachio Cookie',
+            'Potato Salad Cookie',
+            'Princess Bari Cookie',
+            'Princess Cookie',
+            'Prophet Cookie',
+            'Rebel Cookie',
+            'Red Bean Cookie',
+            'Red Pepper Cookie',
+            'Rockstar Cookie',
+            'Roll Cake Cookie',
+            'Scallion Kimchi Cookie',
+            'Sea Fairy Cookie',
+            'Sikhye Cookie',
+            'Skater Cookie',
+            'Skating Queen Cookie',
+            'Snow Sugar Cookie',
+            'Soda Cookie',
+            'Special Force Cookie',
+            'Strawberry Cookie',
+            'Strawberry Shortcake Cookie',
+            'Sujeonggwa Cookie',
+            'Tiger Lily Cookie',
+            'Vampire Cookie',
+            'Werewolf Cookie',
+            'White Choco Cookie',
+            'White Kimchi Cookie',
+            'Wind Archer Cookie',
+            'Wizard Cookie',
+            'Zombie Cookie'
+        ];
+
+        const colors = ['#f6c65f', '#8ccfff', '#ff7dbf', '#7adbb7', '#f99d77', '#c8a2ff', '#ffd166'];
+        const grid = document.getElementById('cookie-grid');
+
+        grid.innerHTML = cookies.map((cookie, index) => `
+            <article class="card game-card">
+                <div class="card-image" style="background: linear-gradient(135deg, ${colors[index % colors.length]}, #fff3c4);"></div>
+                <div class="card-content">
+                    <h3>${cookie}</h3>
+                    <p>คุกกี้ตัวที่ ${index + 1} ในรายการ Cookie Run Classic</p>
+                </div>
+            </article>
+        `).join('');
+    </script>
 </body>
 </html>

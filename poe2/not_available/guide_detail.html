@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUGUIDE - Lightning Sorceress Build Guide</title>
+    <meta name="description" content="คู่มือการเล่น Lightning Sorceress อย่างละเอียด พร้อมถาม-ตอบผู้สร้างบิลด์">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+    <main class="container page-main">
+        <div class="breadcrumb">
+            <a href="../../index.html">หน้าหลัก</a> > <a href="hub.html">POE2</a> > <a href="#">Guides</a> > <span>Lightning Sorceress</span>
+        </div>
+
+        <div class="guide-layout">
+            <!-- Left Sidebar (TOC) -->
+            <aside class="toc-sidebar">
+                <div class="toc-sticky">
+                    <h3>สารบัญ (Table of Contents)</h3>
+                    <ul>
+                        <li><a href="#overview">1. ภาพรวมบิลด์ (Overview)</a></li>
+                        <li><a href="#pros-cons">2. ข้อดี & ข้อเสีย</a></li>
+                        <li><a href="#skills">3. สกิลที่ใช้งาน (Skills)</a></li>
+                        <li><a href="#gear">4. ไอเทมแนะนำ (Gear)</a></li>
+                        <li><a href="#qna">5. กระทู้ถาม-ตอบ (Q&A)</a></li>
+                    </ul>
+
+                    <div class="author-card">
+                        <img src="https://ui-avatars.com/api/?name=AdminG&background=c5a365&color=fff" alt="AdminG"
+                            class="author-avatar">
+                        <div class="author-info">
+                            <h4>AdminG</h4>
+                            <span class="author-badge">ผู้สร้างบิลด์</span>
+                            <p>อัปเดตเมื่อ: 2 ชั่วโมงที่แล้ว</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content (Wiki + Forum) -->
+            <article class="wiki-main">
+                <div class="wiki-header">
+                    <span class="guide-badge">S-Tier</span>
+                    <h1>Lightning Sorceress - เคลียร์แมปไวที่สุดสำหรับผู้เริ่มต้น</h1>
+                    <p class="wiki-subtitle">บิลด์เวทมนตร์สายฟ้าที่เน้นความรวดเร็วในการฟาร์ม ทำความเข้าใจง่าย
+                        เหมาะสำหรับทุกคน</p>
+                </div>
+
+                <div class="wiki-content">
+                    <!-- Cheat Sheet (MOBAFire Style) -->
+                    <section class="cheat-sheet">
+                        <div class="cs-header">
+                            <h2>⚡ Cheat Sheet (สรุปบิลด์ฉบับย่อ)</h2>
+                        </div>
+                        <div class="cs-body">
+                            <div class="cs-group">
+                                <h3>อาวุธหลัก (Core Weapon)</h3>
+                                <div class="item-row">
+                                    <div class="item-slot"><img
+                                            src="https://web.poecdn.com/public/poe2/media/images/classes/sorceress/staff.png"
+                                            alt="Staff"
+                                            onerror="this.src='https://placehold.co/60x60/1a1a1a/c5a365?text=Staff'">
+                                    </div>
+                                    <div class="item-info">
+                                        <h4>Crackling Staff of Storms</h4>
+                                        <p>เพิ่มดาเมจสายฟ้า 50%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cs-group">
+                                <h3>สกิลหลัก (Main Skills)</h3>
+                                <div class="item-row">
+                                    <div class="item-slot skill-slot"><img
+                                            src="https://placehold.co/60x60/1a1a1a/c5a365?text=CL"
+                                            alt="Chain Lightning"></div>
+                                    <div class="item-slot skill-slot"><img
+                                            src="https://placehold.co/60x60/1a1a1a/c5a365?text=TP" alt="Teleport"></div>
+                                    <div class="item-slot skill-slot"><img
+                                            src="https://placehold.co/60x60/1a1a1a/c5a365?text=SB" alt="Storm Brand">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Gem Links (POE2 Style) -->
+                    <section class="skill-order-section" id="skill-order">
+                        <h2>🔗 การเชื่อมสกิลเจม (Gem Links Setup)</h2>
+                        <p class="table-desc">ตารางแสดงการเชื่อมต่อระหว่าง
+                            Active Skill และ Support Skill</p>
+                        <div class="skill-order-wrapper">
+                            <table class="skill-order-table">
+                                <thead>
+                                    <tr>
+                                        <th>หน้าที่ (Role)</th>
+                                        <th>สกิลหลัก (Active Gem)</th>
+                                        <th>สกิลสนับสนุน (Support Gems)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ทำดาเมจหลัก (Main DPS)</td>
+                                        <td class="skill-name">
+                                            <div class="item-slot skill-slot-small"><img
+                                                    src="https://placehold.co/30x30/1a1a1a/c5a365?text=CL"></div>
+                                            Chain Lightning
+                                        </td>
+                                        <td class="text-left">
+                                            <span class="author-badge gem-badge">Added
+                                                Lightning</span> +
+                                            <span class="author-badge gem-badge">Spell
+                                                Echo</span> +
+                                            <span class="author-badge gem-badge">Lightning
+                                                Pen.</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>เคลื่อนที่ (Movement)</td>
+                                        <td class="skill-name">
+                                            <div class="item-slot skill-slot-small"><img
+                                                    src="https://placehold.co/30x30/1a1a1a/c5a365?text=TP"></div>
+                                            Teleport
+                                        </td>
+                                        <td class="text-left">
+                                            <span class="author-badge gem-badge">Faster
+                                                Casting</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>สกิลบัฟ (Aura / Buffs)</td>
+                                        <td class="skill-name">
+                                            <div class="item-slot skill-slot-small"><img
+                                                    src="https://placehold.co/30x30/1a1a1a/c5a365?text=Wr"></div>
+                                            Wrath
+                                        </td>
+                                        <td class="text-left">
+                                            <span class="author-badge gem-badge">Divine
+                                                Blessing</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Threats & Synergies -->
+                    <section class="threats-section" id="threats">
+                        <h2>⚠️ จุดอ่อน / จุดแข็ง (Threats & Synergies)</h2>
+                        <div class="threats-grid">
+                            <div class="threat-card extreme">
+                                <h3>แพ้ทางหนักสุด (Extreme Threat)</h3>
+                                <div class="threat-target">
+                                    <img src="https://placehold.co/50x50/1a1a1a/f56565?text=Boss" alt="Boss">
+                                    <span>The Weaver (บอสแมงมุม)</span>
+                                </div>
+                                <div class="threat-bar-container">
+                                    <div class="threat-bar extreme w-95"></div>
+                                </div>
+                                <p>ดาเมจพิษทะลุเกราะได้ ต้องหาไอเทมกัน Chaos Resistance ด่วน ไม่ยืนชนตรงๆ</p>
+                            </div>
+                            <div class="threat-card synergy">
+                                <h3>เพื่อนร่วมทีมที่ดี (Synergy)</h3>
+                                <div class="threat-target">
+                                    <img src="https://placehold.co/50x50/1a1a1a/48bb78?text=Monk" alt="Monk">
+                                    <span>Monk (สายออร่า)</span>
+                                </div>
+                                <div class="threat-bar-container">
+                                    <div class="threat-bar synergy w-85"></div>
+                                </div>
+                                <p>ยืนหลังเพื่อน ช่วยทำดาเมจฟรีๆ แถมได้บัฟลดคูลดาวน์ด้วย</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="overview">
+                        <h2>1. ภาพรวมบิลด์ (Overview)</h2>
+                        <p>บิลด์ <strong>Lightning Sorceress</strong> เป็นหนึ่งในบิลด์ที่ได้รับความนิยมสูงสุดในขณะนี้
+                            ด้วยความสามารถในการโจมตีศัตรูเป็นกลุ่มกว้าง และเคลียร์แผนที่ได้อย่างรวดเร็ว
+                            หลักการทำงานคือการใช้ Chain Lightning ผสมผสานกับการใช้สกิลเสริมความเร็วเคลื่อนที่</p>
+                        <div class="alert alert-info">
+                            <strong>Note:</strong> บิลด์นี้สามารถใช้ลุยบอสได้ แต่ต้องอาศัยการจัดตำแหน่ง (Positioning)
+                            ที่ดี เพราะตัวค่อนข้างบาง
+                        </div>
+                    </section>
+
+                    <section id="pros-cons">
+                        <h2>2. ข้อดี & ข้อเสีย</h2>
+                        <div class="pros-cons-grid">
+                            <div class="pros">
+                                <h3>✅ ข้อดี</h3>
+                                <ul>
+                                    <li>เคลียร์มอนสเตอร์เป็นฝูงได้เร็วมาก</li>
+                                    <li>ไม่ต้องใช้ไอเทมราคาแพงในการเริ่มต้น (Budget-friendly)</li>
+                                    <li>เอฟเฟกต์สกิลอลังการ เล่นสนุก</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h3>❌ ข้อเสีย</h3>
+                                <ul>
+                                    <li>พลังชีวิตค่อนข้างน้อย โดนบอสโจมตีทีเดียวอาจตายได้</li>
+                                    <li>มีปัญหาเรื่องการจัดการมานาในช่วงต้นเกม</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="skills">
+                        <h2>3. สกิลที่ใช้งาน (Skills)</h2>
+                        <p>เซ็ตสกิลหลักที่แนะนำสำหรับการทำคอมโบดาเมจสูงสุด:</p>
+                        <table class="wiki-table">
+                            <thead>
+                                <tr>
+                                    <th>ชื่อสกิล</th>
+                                    <th>ประเภท</th>
+                                    <th>แนะนำสำหรับ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Chain Lightning</strong></td>
+                                    <td>Main DPS</td>
+                                    <td>โจมตีศัตรูเป็นกลุ่ม ชิ่งดาเมจ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Teleport</strong></td>
+                                    <td>Movement</td>
+                                    <td>หลบหลีกและพุ่งตัว</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Storm Brand</strong></td>
+                                    <td>Utility / Boss DPS</td>
+                                    <td>ทำดาเมจเสริมเมื่อสู้กับบอส</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+
+                <hr class="wiki-divider">
+
+                <!-- Q&A Forum Thread -->
+                <section id="qna" class="forum-thread">
+                    <h2>กระทู้ถาม-ตอบกับเจ้าของบิลด์ (Q&A Thread)</h2>
+                    <p>มีข้อสงสัยเกี่ยวกับการปั้นตัวละคร? คอมเมนต์ถาม <strong>AdminG</strong> ได้เลย!</p>
+
+                    <div class="comment-box">
+                        <textarea placeholder="พิมพ์คำถามของคุณที่นี่..."></textarea>
+                        <button class="btn btn-primary">ส่งคำถาม</button>
+                    </div>
+
+                    <div class="thread-list">
+                        <!-- User Question -->
+                        <div class="thread-item user-comment">
+                            <div class="thread-user">
+                                <img src="https://ui-avatars.com/api/?name=NoobPlayer&background=333&color=fff"
+                                    alt="User">
+                                <div>
+                                    <strong>NoobPlayer</strong>
+                                    <span>โพสต์เมื่อ 1 ชั่วโมงที่แล้ว</span>
+                                </div>
+                            </div>
+                            <div class="thread-content">
+                                <p>ช่วงเลเวล 1-20 ควรอัปสกิลอะไรนำก่อนครับ? มานาหมดไวมากเลยตีมอนไม่ทัน</p>
+                            </div>
+                            <div class="thread-actions">
+                                <div class="vote-control">
+                                    <button class="vote-btn upvote">▲</button>
+                                    <span class="vote-count">5</span>
+                                    <button class="vote-btn downvote">▼</button>
+                                </div>
+                                <button class="btn-text">ตอบกลับ</button>
+                            </div>
+                        </div>
+
+                        <!-- Author Reply -->
+                        <div class="thread-item author-reply">
+                            <div class="thread-user">
+                                <img src="https://ui-avatars.com/api/?name=AdminG&background=c5a365&color=fff"
+                                    alt="Admin">
+                                <div>
+                                    <strong>AdminG</strong> <span class="author-badge">ผู้สร้างบิลด์</span>
+                                    <span>ตอบกลับเมื่อ 45 นาทีที่แล้ว</span>
+                                </div>
+                            </div>
+                            <div class="thread-content">
+                                <p>แนะนำให้อัปพาสซีฟเพิ่มอัตราการฟื้นฟูมานา (Mana Regen) ทางฝั่งขวาของ Skill Tree
+                                    ก่อนครับ และพยายามหาขวดยามานาแบบกดยกซด (Flask) มาใส่ไว้ 2 ขวดในช่วงแรก
+                                    จะช่วยแก้ปัญหาได้ครับ!</p>
+                            </div>
+                            <div class="thread-actions">
+                                <div class="vote-control">
+                                    <button class="vote-btn upvote active">▲</button>
+                                    <span class="vote-count active">12</span>
+                                    <button class="vote-btn downvote">▼</button>
+                                </div>
+                                <button class="btn-text">ตอบกลับ</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">GU</span><span class="logo-accent">GUIDE</span>
+                <p>ศูนย์รวมข้อมูลเกมสำหรับคนไทย</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">เกี่ยวกับเรา</a>
+                <a href="#">ข้อตกลงการใช้งาน</a>
+                <a href="#">ติดต่อเรา</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GUGUIDE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
+
+

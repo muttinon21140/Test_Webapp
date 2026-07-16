@@ -6,7 +6,7 @@ function ensureSiteNavbar() {
     const navMarkup = `
         <nav class="navbar">
             <div class="nav-container">
-                <a href="index.html" class="logo">
+                <a href="../index.html" class="logo">
                     <span class="logo-text">GU</span><span class="logo-accent">GUIDE</span>
                 </a>
 

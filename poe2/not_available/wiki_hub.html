@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUGUIDE - Wiki Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <main class="container page-main">
+        <div class="wiki-header">
+            <h1>📚 สารานุกรมไอเทม (Wiki)</h1>
+            <p class="wiki-subtitle">ค้นหาข้อมูลไอเทม, หินสกิล, และอุปกรณ์ทั้งหมดจาก Path of Exile 2</p>
+        </div>
+
+        <div class="wiki-hub-layout">
+            <!-- Sidebar Filters -->
+            <aside class="wiki-sidebar">
+                <div class="filter-group">
+                    <h3>ค้นหา</h3>
+                    <input type="text" class="form-control" placeholder="พิมพ์ชื่อไอเทมหรือสกิล...">
+                </div>
+                
+                <div class="filter-group">
+                    <h3>หมวดหมู่หลัก (Category)</h3>
+                    <ul class="filter-list">
+                        <li><label><input type="radio" name="category" checked> ทั้งหมด (All)</label></li>
+                        <li><label><input type="radio" name="category"> หินสกิล (Skill Gems)</label></li>
+                        <li><label><input type="radio" name="category"> อาวุธ (Weapons)</label></li>
+                        <li><label><input type="radio" name="category"> ชุดเกราะ (Armors)</label></li>
+                        <li><label><input type="radio" name="category"> เครื่องประดับ (Accessories)</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h3>ความหายาก (Rarity)</h3>
+                    <ul class="filter-list">
+                        <li><label><input type="checkbox" checked> <span class="text-unique">Unique (ส้ม)</span></label></li>
+                        <li><label><input type="checkbox" checked> <span class="text-rare">Rare (เหลือง)</span></label></li>
+                        <li><label><input type="checkbox"> <span class="text-magic">Magic (ฟ้า)</span></label></li>
+                        <li><label><input type="checkbox"> <span class="text-normal">Normal (ขาว)</span></label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Grid -->
+            <div class="wiki-grid-content">
+                <div class="wiki-grid-header">
+                    <h2>ผลการค้นหา (124 รายการ)</h2>
+                    <select class="form-control form-control-auto">
+                        <option>เรียงตาม: อัปเดตล่าสุด</option>
+                        <option>เรียงตาม: ชื่อ A-Z</option>
+                        <option>เรียงตาม: เลเวลที่ต้องการ (สูง-ต่ำ)</option>
+                    </select>
+                </div>
+
+                <div class="wiki-item-grid">
+                    <!-- Unique Weapon -->
+                    <a href="wiki_detail.html" class="wiki-item-card rarity-unique tooltip-trigger" 
+                       data-tooltip-title="Crackling Staff of Storms" 
+                       data-tooltip-type="Staff" 
+                       data-tooltip-desc="เพิ่มความเสียหายสายฟ้า 50%<br>โจมตีทะลุเกราะ 10%" 
+                       data-tooltip-flavor="พายุสายฟ้าที่ถูกผนึกไว้ในไม้เท้าโบราณ">
+                        <div class="wiki-item-icon">
+                            <img src="https://web.poecdn.com/public/poe2/media/images/classes/sorceress/staff.png" alt="Staff" onerror="this.src='https://placehold.co/80x80/1a1a1a/af6025?text=Staff'">
+                        </div>
+                        <div class="wiki-item-name">Crackling Staff</div>
+                    </a>
+
+                    <!-- Skill Gem -->
+                    <a href="wiki_detail.html" class="wiki-item-card rarity-gem tooltip-trigger" 
+                       data-tooltip-title="Chain Lightning" 
+                       data-tooltip-type="Lightning, Spell, Chaining" 
+                       data-tooltip-desc="ยิงสายฟ้าชิ่งใส่ศัตรูสูงสุด 5 ตัว<br>สร้างความเสียหายสายฟ้า 12-24 หน่วย">
+                        <div class="wiki-item-icon">
+                            <img src="https://placehold.co/80x80/1a1a1a/2255ff?text=CL" alt="Chain Lightning">
+                        </div>
+                        <div class="wiki-item-name">Chain Lightning</div>
+                    </a>
+
+                    <!-- Rare Armor -->
+                    <a href="wiki_detail.html" class="wiki-item-card rarity-rare tooltip-trigger"
+                       data-tooltip-title="Agony Jack" 
+                       data-tooltip-type="Leather Armor" 
+                       data-tooltip-desc="+50 พลังชีวิตสูงสุด<br>เพิ่มความต้านทานไฟ 25%">
+                        <div class="wiki-item-icon">
+                            <img src="https://placehold.co/80x80/1a1a1a/ffff00?text=Armor" alt="Armor">
+                        </div>
+                        <div class="wiki-item-name">Agony Jack</div>
+                    </a>
+
+                    <!-- Support Gem -->
+                    <a href="wiki_detail.html" class="wiki-item-card rarity-gem tooltip-trigger"
+                       data-tooltip-title="Spell Echo Support" 
+                       data-tooltip-type="Support, Spell" 
+                       data-tooltip-desc="สกิลที่เชื่อมต่อจะร่ายซ้ำอีกครั้งโดยอัตโนมัติ<br>ลดความเสียหาย 10%">
+                        <div class="wiki-item-icon">
+                            <img src="https://placehold.co/80x80/1a1a1a/dd2222?text=Echo" alt="Spell Echo">
+                        </div>
+                        <div class="wiki-item-name">Spell Echo</div>
+                    </a>
+                </div>
+                
+                <div class="text-center mt-40">
+                    <button class="btn btn-secondary">โหลดเพิ่มเติม...</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">GU</span><span class="logo-accent">GUIDE</span>
+                <p>ศูนย์รวมข้อมูลเกมสำหรับคนไทย</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">เกี่ยวกับเรา</a>
+                <a href="#">ข้อตกลงการใช้งาน</a>
+                <a href="#">ติดต่อเรา</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GUGUIDE. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
+
+

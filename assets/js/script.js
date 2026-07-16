@@ -6,17 +6,17 @@ function ensureSiteNavbar() {
     const navMarkup = `
         <nav class="navbar">
             <div class="nav-container">
-                <a href="/index.html" class="logo">
+                <a href="index.html" class="logo">
                     <span class="logo-text">GU</span><span class="logo-accent">GUIDE</span>
                 </a>
 
                 <div class="nav-links">
-                    <a href="/poe2/index.html" class="nav-game-link">
-                        <img src="/assets/images/icons/poe2_icon.ico" alt="POE2" class="nav-game-icon" onerror="this.style.display='none'">
+                    <a href="poe2/index.html" class="nav-game-link">
+                        <img src="assets/images/icons/poe2_icon.ico" alt="POE2" class="nav-game-icon" onerror="this.style.display='none'">
                         Path of Exile 2
                     </a>
                     <a href="#" class="btn btn-primary" style="color: #ffffff; padding: 8px 16px;">
-                        <img src="/assets/images/icons/discord_icon.ico" alt="Discord" class="nav-game-icon" onerror="this.style.display='none'">
+                        <img src="assets/images/icons/discord_icon.ico" alt="Discord" class="nav-game-icon" onerror="this.style.display='none'">
                         เข้าร่วม Discord
                     </a>
                 </div>
